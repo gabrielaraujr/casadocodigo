@@ -47,13 +47,13 @@ class LivroDao {
     return new Promise((resolve, reject) => {
       this._db.get(
         `
-          SELECT * 
+          SELECT *
           FROM livros
           WHERE id = ?
         `,
         [id],
         (erro, livro) => {
-          if (erro) return reject('Não foi possível encontrar o livro!');
+          if (erro) return reject('Não foi possível encontrar o livro!')
 
           return resolve(livro)
         }
@@ -92,8 +92,8 @@ class LivroDao {
     return new Promise((resolve, reject) => {
       this._db.run(
         `
-          DELETE 
-          FROM livros 
+          DELETE
+          FROM livros
           WHERE id = ?
         `,
         [id],

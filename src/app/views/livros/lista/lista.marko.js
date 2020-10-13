@@ -18,16 +18,16 @@ var marko_template = module.exports = require("marko/src/html").t(__filename),
 function render(input, out, __component, component, state) {
   var data = input;
 
-  out.w("<html><head><meta charset=\"utf-8\"></head><body>");
+  out.w("<html><head><meta charset=\"utf-8\"><link rel=\"stylesheet\" href=\"/estatico/css/bootstrap.min.css\"><link rel=\"stylesheet\" href=\"/estatico/css/fontawesome.min.css\"><link rel=\"stylesheet\" href=\"/estatico/css/casadocodigo.css\"></head><body>");
 
   component_globals_tag({}, out);
 
   out.w("<h1> Lista de Livros </h1><table id=\"livros\"><tr><td>ID</td><td>Título</td><td>Preço</td><td>Editar</td><td>Remover</td></tr>");
 
-  var for__12 = 0;
+  var for__15 = 0;
 
   marko_forEach(data.livros, function(livro) {
-    var keyscope__13 = "[" + ((for__12++) + "]");
+    var keyscope__16 = "[" + ((for__15++) + "]");
 
     out.w("<tr id=\"livro_" +
       marko_escapeXmlAttr(livro.id) +
@@ -37,16 +37,18 @@ function render(input, out, __component, component, state) {
       marko_escapeXml(livro.titulo) +
       "</td><td>" +
       marko_escapeXml(livro.preco) +
-      "</td><td><a href=\"#\">Editar</a></td><td><a href=\"#\" data-ref=\"" +
+      "</td><td><a href=\"/livros/form/" +
+      marko_escapeXmlAttr(livro.id) +
+      "\">Editar</a></td><td><a href=\"#\" data-ref=\"" +
       marko_escapeXmlAttr(livro.id) +
       "\" data-type=\"remocao\">Remover</a></td></tr>");
   });
 
-  out.w("</table><script src=\"./remove-livro.js\">\r\n    </script>");
+  out.w("</table><script src=\"/estatico/js/remove-livro.js\">\r\n  </script>");
 
   init_components_tag({}, out);
 
-  await_reorderer_tag({}, out, __component, "23");
+  await_reorderer_tag({}, out, __component, "26");
 
   out.w("</body></html>");
 }
