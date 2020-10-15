@@ -21,10 +21,10 @@ class LivroDao {
         ],
         function (err) {
           if (err) {
-            console.log(err);
-            return reject('Não foi possível adicionar o livro!');
+            console.log(err)
+            return reject('Não foi possível adicionar o livro!')
           }
-          resolve();
+          resolve()
         }
       )
     })
@@ -43,7 +43,7 @@ class LivroDao {
     })
   }
 
-  buscarPorId(id) {
+  buscaPorId(id) {
     return new Promise((resolve, reject) => {
       this._db.get(
         `
@@ -79,10 +79,10 @@ class LivroDao {
         ],
         function (err) {
           if (err) {
-            console.log(err);
-            return reject('Não foi possível adicionar o livro!');
+            console.log(err)
+            return reject('Não foi possível editar o livro!')
           }
-          resolve();
+          resolve()
         }
       )
     })
@@ -107,4 +107,4 @@ class LivroDao {
   }
 }
 
-module.exports = LivroDao;
+module.exports = LivroDao
