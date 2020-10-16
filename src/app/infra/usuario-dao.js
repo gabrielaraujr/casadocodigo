@@ -1,7 +1,7 @@
 class UsuarioDao {
 
   constructor(db) {
-    this._db = db
+    this._db = db;
   }
 
   buscaPorEmail(email) {
@@ -15,14 +15,14 @@ class UsuarioDao {
         [email],
         (erro, usuario) => {
           if (erro) {
-            return reject('Não foi possível encontrar o usuário!')
+            return reject('Não foi possível encontrar o usuário!');
           }
 
-          return resolve(usuario)
+          return resolve(usuario);
         }
       )
-    })
+    });
   }
 }
 
-module.exports = UsuarioDao
+module.exports = UsuarioDao;

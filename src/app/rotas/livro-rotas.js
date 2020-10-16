@@ -1,7 +1,7 @@
 const LivroControlador = require('../controladores/livro-controlador');
 const livroControlador = new LivroControlador();
-const Livro = require('../modelos/livro');
 
+const Livro = require('../modelos/livro');
 
 module.exports = (app) => {
   const rotasLivro = LivroControlador.rotas();
