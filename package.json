@@ -1,14 +1,25 @@
 {
   "name": "casadocodigo",
   "version": "1.0.0",
-  "description": "Livraria Casa do Codigo",
+  "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server.js --ignore *.marko.js"
   },
-  "author": "Gabriel Leite",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrielaraujr/casadocodigo.git"
+  },
+  "author": "Gabriel Araujo <matadoxx@gmail.com>",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gabrielaraujr/casadocodigo/issues"
+  },
+  "homepage": "https://github.com/gabrielaraujr/casadocodigo#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.5"
+  },
   "dependencies": {
     "body-parser": "1.18.3",
     "express": "4.16.3",
@@ -18,10 +29,7 @@
     "method-override": "3.0.0",
     "passport": "0.4.0",
     "passport-local": "1.0.0",
-    "sqlite3": "4.0.2",
+    "sqlite3": "^5.0.0",
     "uuid": "3.3.2"
-  },
-  "devDependencies": {
-    "nodemon": "1.18.4"
   }
 }

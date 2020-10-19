@@ -8,9 +8,9 @@ class LivroDao {
     return new Promise((resolve, reject) => {
       this._db.run(`
         INSERT INTO livros (
-            titulo,
-            preco,
-            descricao
+          titulo,
+          preco,
+          descricao
         ) values (?,?,?)
         `,
         [
